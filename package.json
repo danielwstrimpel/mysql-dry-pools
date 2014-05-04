@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "Daniel W. Strimpel"
+  },
+  "name": "mysql-dry-pools",
+  "description": "The library's fundamental concept is to provide a more DRY way of using the node-mysql library with pooled connections, promises and nested transactions.",
+  "version": "0.0.1",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielwstrimpel/mysql-dry-pools"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "test": "grunt",
+    "watch": "grunt watch"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "mysql": "~2.0.0-rc2",
+    "q": "~1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "keywords": [
+    "mysql",
+    "promises",
+    "transactions"
+  ]
+}
