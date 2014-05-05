@@ -15,9 +15,6 @@
     "test": "grunt",
     "watch": "grunt watch"
   },
-  "engines": {
-    "node": "*"
-  },
   "dependencies": {
     "mysql": "~2.0.0-rc2",
     "q": "~1.0.0"
