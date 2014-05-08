@@ -362,6 +362,32 @@ module.exports = {
             .done(function () {
                 test.done();
             });
+        },
+        'it should be able to handle many nested transactions': function (test) {
+            test.expect(1);
+
+            var connection = getMockTransactionConnection();
+
+            connection.transaction(function (poolConnection) {
+                return poolConnection.transaction(function (poolConnection) {
+                    return poolConnection.transaction(function () {
+                        return;
+                    }, poolConnection)
+                    .then(function () {
+                        return poolConnection.transaction(function (poolConnection) {
+                            return poolConnection.transaction(function () {
+                                return;
+                            }, poolConnection);
+                        }, poolConnection);
+                    });
+                }, poolConnection);
+            })
+            .then(function () {
+                test.ok(true);
+            })
+            .done(function () {
+                test.done();
+            });
         }
     },
     '_savepoint Tests' : {

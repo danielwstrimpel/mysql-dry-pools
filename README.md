@@ -2,7 +2,7 @@
 
 ## WORK IN PROGRESS
 
-This library is not meant for general consumptions yet.
+This library is not meant for general consumption yet.
 
 ## Install
 
